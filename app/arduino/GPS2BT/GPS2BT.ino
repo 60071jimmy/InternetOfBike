@@ -14,13 +14,13 @@
 //***定義變數區***
 #define Bluetooth_KEY 5
 //  定義藍芽傳輸模組KEY接腳連接至arduino第接腳
-#define Bluetooth_RxD 9
+#define Bluetooth_RxD 7
 //  定義藍芽傳輸模組RxD接腳連接至arduino第9接腳
 #define Bluetooth_TxD 6
 //  定義藍芽傳輸模組TxD接腳連接至arduino第8接腳
-#define GPS_RxD 11
+#define GPS_RxD 9
 //  定義GPS模組RxD接腳連接至arduino第11接腳
-#define GPS_TxD 10
+#define GPS_TxD 8
 //  定義GPS模組TxD接腳連接至arduino第10接腳
 SoftwareSerial BTSerial(Bluetooth_TxD, Bluetooth_RxD);
 //  建立軟體定義串列埠BTSerial，用以控制藍芽模組
@@ -45,14 +45,16 @@ void setup()                             //  setup程式
 
 void loop()
 {
-     if (GPSSerial.available())
+     delay(10);
+     GPSSerial.listen();
+     if (GPSSerial.available() > 0)
      {
           char GPSSerial_read;
           GPSSerial_read = GPSSerial.read();
           cy_queue_push(&queue, GPSSerial_read);
-          Serial.write(GPSSerial_read);
      }
      else {
+          delay(10);
           while (!cy_queue_is_empty(&queue)) {
                BTSerial.write(cy_queue_pop(&queue));
           }
