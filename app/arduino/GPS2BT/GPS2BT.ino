@@ -5,7 +5,7 @@
   CONTACT: techbitar at gmail dot com (techbitar.com)
   http://www.techbitar.com/modify-the-hc-05-bluetooth-module-defaults-using-at-commands.html
   Editor: Jimmy Hu
-  DATE: Oct 30, 2016
+  DATE: Feb 8, 2018
 */
 //***函式庫引用區***
 #include  <SoftwareSerial.h>              //  引用<SoftwareSerial.h>函式庫
@@ -13,15 +13,15 @@
 
 //***定義變數區***
 #define Bluetooth_KEY 5
-//  定義藍芽傳輸模組KEY接腳連接至arduino第接腳
+//  定義藍芽傳輸模組KEY接腳連接至arduino第5接腳
 #define Bluetooth_RxD 7
-//  定義藍芽傳輸模組RxD接腳連接至arduino第9接腳
+//  定義藍芽傳輸模組RxD接腳連接至arduino第7接腳
 #define Bluetooth_TxD 6
-//  定義藍芽傳輸模組TxD接腳連接至arduino第8接腳
+//  定義藍芽傳輸模組TxD接腳連接至arduino第6接腳
 #define GPS_RxD 9
-//  定義GPS模組RxD接腳連接至arduino第11接腳
+//  定義GPS模組RxD接腳連接至arduino第9接腳
 #define GPS_TxD 8
-//  定義GPS模組TxD接腳連接至arduino第10接腳
+//  定義GPS模組TxD接腳連接至arduino第8接腳
 SoftwareSerial BTSerial(Bluetooth_TxD, Bluetooth_RxD);
 //  建立軟體定義串列埠BTSerial，用以控制藍芽模組
 SoftwareSerial GPSSerial(GPS_TxD, GPS_RxD);
