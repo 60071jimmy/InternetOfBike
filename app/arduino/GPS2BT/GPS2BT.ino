@@ -27,6 +27,7 @@ SoftwareSerial BTSerial(Bluetooth_TxD, Bluetooth_RxD);
 SoftwareSerial GPSSerial(GPS_TxD, GPS_RxD);
 //  建立軟體定義串列埠GPSSerial，用以控制GPS模組
 cy_queue queue;
+//	宣告queue為cy_queue物件
 
 void setup()                             //  setup程式
 { //  進入setup程式
