@@ -46,7 +46,7 @@ void setup()                             //  setup程式
 
 void loop()
 {
-     delay(10);
+     delay(12);
      GPSSerial.listen();
      if (GPSSerial.available() > 0)
      {
@@ -55,7 +55,7 @@ void loop()
           cy_queue_push(&queue, GPSSerial_read);
      }
      else {
-          delay(10);
+          delay(12);
           while (!cy_queue_is_empty(&queue)) {
                BTSerial.write(cy_queue_pop(&queue));
           }
