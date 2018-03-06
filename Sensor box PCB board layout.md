@@ -1,0 +1,56 @@
+Sensor box PCB board layout
+===
+###### tags: `PCB layout`
+
+> Author：Jimmy Hu
+> 更新日期：2018/3/6 (二)
+>   
+> 本文以[Markdown](https://zh.wikipedia.org/wiki/Markdown)語法撰寫。
+
+### 材料清單
+
+|Part|Value|Device|Package|Description||
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|C1|0.1uF|CAP0805-NP|CAP0805-NP|||
+|C2|4.7uF|CAP-TANA-P|TAN-A|||
+|C3|0.1uF|CAP0805-NP|CAP0805-NP|||
+|C4|0.1uF|CAP0805-NP|CAP0805-NP|||
+|C7|0.1uF|CAP0805-NP|CAP0805-NP|||
+|C8|4.7uF|CAP-TANA-P|TAN-A|||
+|C9|0.1uF|CAP0805-NP|CAP0805-NP|||
+|D1|MBR0520|MBR0520|SOD-123|||
+|J1|HEAD15-NOSS|HEAD15-NOSS|HEAD15-NOSS|||
+|J2|HEAD15-NOSS-1|HEAD15-NOSS-1|HEAD15-NOSS-1|||
+|J3|USB-MINI-B%C|USB-MINI-B%C|USB-MINI-B_2|||
+|J4|HEAD3X2|HEAD3X2|HEAD3X2|||
+|J5|TI Sensortag接頭|TI Sensortag接頭|TI Sensortag接頭|||
+|LED1|RED_RX|LED0805|LED0805|||
+|LED2|GREEN_TX|LED0805|LED0805|||
+|LED3|L_AMBER|LED0805|LED0805|||
+|LED4|BLUE|LED0805|LED0805|||
+|RP1|1K|RES4NT|RES4NT|||
+|RP2|330|RES4NT|RES4NT|||
+|SW1|RESET|PB157|157SW|||
+|U$4|FIDUCIAL1X2|FIDUCIAL1X2|FIDUCIAL-1X2|Fiducial Alignment Points||
+|U$36|LOGO-G%117X105|LOGO-G%117X105|LOGO-G_117X105|||
+|U$37|FIDUCIAL1X2|FIDUCIAL1X2|FIDUCIAL-1X2|Fiducial Alignment Points||
+|U$53|FIDUCIAL1X2|FIDUCIAL1X2|FIDUCIAL-1X2|Fiducial Alignment Points||
+|U$54|FIDUCIAL1X2|FIDUCIAL1X2|FIDUCIAL-1X2|Fiducial Alignment Points||
+|U1|ATMEGA168-20AU|ATMEGA168-20AU|QFP032|||
+|U2|FT232RL|FT232RL|SSOP28|||
+|U3|UA78M05|UA78M05|SOT223|||
+|Y1|16MHz|RESONATORMU|RESONATOR|||
+
+### TI Sensortag
+
+- DP4－IDIO28－Tx
+- DP5－IDIO29－Rx
+- Power
+- GND
+
+### Note
+
+- GPS module 獨立供電
+
+### Reference
+- https://www.rs-online.com/designspark/reference-design-of-arduino-nano-3-0
